@@ -1,0 +1,4 @@
+/node_modules
+/.history
+/.eslintrc.js
+/webpack.config.js

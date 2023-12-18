@@ -1,0 +1,14 @@
+const devMode = process.env.NODE_ENV === 'development';
+const moduleName = '{{applicationName}}';//微前端模块名称
+const resolve = (dir) => `./src/views/${dir}`
+module.exports = {
+  name: moduleName,
+  filename: `remoteEntry.js`,//微应用入口,不建议修改
+  exposes: { // 对外暴露的页面(组件)
+    './index': resolve('index'),// index模块
+    './store': './src/store/index.js', // 默认将子应用 store 导出,供base应用注册
+  },
+  remotes: {
+    base: 'base@/remoteEntry.js'
+  },
+}

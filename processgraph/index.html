@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>流程展示</title>
+  <style>
+    #message {
+      width: 400px;
+      min-height: 200px;
+      border: 1px solid #ccc;
+      margin:  auto;
+      display: none;
+    }
+    h3 {
+      text-align: center;
+    }
+    #tip {
+      padding: 0 20px;
+      word-break: break-all;
+      text-align: center;
+      margin-top: 40px;
+    }
+    #table {
+      border-collapse: collapse;
+      width: 400px;
+      font-size: 12px;
+      line-height: 20px;
+      position: fixed;
+      background-color: #fff;
+      display: none;
+      position: absolute;
+      border: 1px solid #222;
+    }
+    td {
+      border: 1px solid #222;
+    }
+    .td {
+      width: 200px;
+    }
+    #process {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div id="process">
+    <div id="tips">
+      <table id="table" border="1">
+        <tr>
+          <td class="td" colspan="2">活动类型</td>
+          <td class="td" colspan="2" id="type"></td>
+        </tr>
+        <tr>
+          <td colspan="2">活动状态</td>
+          <td colspan="2" id="status"></td>
+        </tr>
+        <tr>
+          <td>参与者</td>
+          <td>开始时间</td>
+          <td>结束时间</td>
+          <td>是否超时</td>
+        </tr>
+        <tbody id="list">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="message">
+    <h3>提示</h3>
+    <div id="tip"></div>
+  </div>
+  <script src="./dist/main.js?a=111"></script>
+  <script>
+    var base = '/'
+    var processgraph = 'com.primeton.bps.workspace.manager.instance.ProcessInstanceManager.getProcessGraph.biz.ext'
+    var currentUserEngine = 'com.primeton.bps.workspace.tenant.engine.setCurrentUserEngine.biz.ext'
+    var activityType = {
+      start: '开始活动',
+      manual: '人工活动',
+      route: '路由活动',
+      finish: '结束活动',
+      subflow: '子流程活动',
+      toolapp: '自由活动'
+    }
+    var activityState = { // 活动状态
+      '1': '未启动',
+      '2': '运行',
+      '3': '挂起',
+      '7': '已完成',
+      '8': '终止',
+      '9': '取消',
+      '10': '待激活'
+    }
+    var table = document.getElementById('table')
+    setCurrentUserEngine()
+    
+    function ajax(url, data, call) {
+      xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      xhr.setRequestHeader('content-type', 'application/json')
+      xhr.onload = function() {
+        var json = JSON.parse(xhr.responseText); // 返回数据
+        if (xhr.status != 200) { // 请求失败 错误提示
+          document.getElementById('message').style.display = 'block'
+          document.getElementById('tip').innerHTML = '流程加载失败，请稍后再试'
+        }
+        call && call(json)
+      };
+      xhr.send(JSON.stringify(data));
+    }
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){return pair[1];}
+      }
+      return('');
+    }
+
+    function setCurrentUserEngine() {
+      ajax(base + currentUserEngine, {
+        engineAppName: getQueryVariable('engine'),
+        tenantId: getQueryVariable('tenant'),
+      },function(data){
+        // console.log(data)
+        getProcessGraph()
+      })
+    }
+
+    function getProcessGraph() {
+      ajax(base + processgraph, {
+        processInstID: getQueryVariable('processInstID'),
+        processDefID: getQueryVariable('processDefID'),
+        processDefName:  getQueryVariable('processDefName')
+      }, function(res) {
+        // console.log(res)
+        process.renderPricessGraph({
+            json: res.result, // define || inst
+            type: getQueryVariable('processDefName') || getQueryVariable('processDefID') ? "Def" : 'inst', // inst || Def
+            dom: "process",
+            showDefId: true,
+            config: {
+              complete: "#228B22", // 已完成
+              processing: "#DC143C", //进行中
+              wait: "#BCBCBC", //未开始
+              defConnectColor: "#222", // 流程定义图
+            },
+            click: (node) => {
+            	// alert(node.type)
+            	// console.log("click", node);
+            },
+            // dblclick: (node) => {
+            // 	console.log("dblclick", node);
+            // },
+            mouseover: function(node, e) {
+              if (node.type !== 'start' && node.type !== 'finish' && node.participant) {
+                table.style.left = e.clientX + 20 + 'px'
+                table.style.top = node.y + node.height + 'px'
+                document.getElementById('type').innerHTML = activityType[node.type]
+                document.getElementById('status').innerHTML = activityState[node.currentState[0]]
+                var html = ''
+                for(var i = 0; i < node.participant.length; i++) {
+                  html += ('<tr><td>' + node.participant[i].participant + '</td><td>' + node.participant[i].startTime + '</td><td>' + node.participant[i].endTime + '</td><td>' + (node.participant[i].isTimeOut === 'Y' ? '是' : '否') + '</td></tr>')
+                }
+                document.getElementById('list').innerHTML = html
+                table.style.display = 'block'
+              }
+            },
+            mouseout: function(node) {
+              if (node.type !== 'start' && node.type !== 'finish' && node.participant) {
+                table.style.display = 'none'
+              }
+            },
+            // touchstart: (node) => {
+            // 	alert(node.type);
+            // },
+          });
+
+      })
+    }
+  </script>
+</body>
+</html>
