@@ -1,0 +1,32 @@
+import { get } from 'lodash'
+const getters = {
+  sidebar: state => state.app.sidebar,
+  pageModel: state => state.app.pageModel,
+  language: state => state.app.language,
+  device: state => state.app.device,
+  visitedViews: state => state.tagsView.visitedViews,
+  cachedViews: state => state.tagsView.cachedViews,
+  token: state => state.user.token,
+  avatar: state => state.user.avatar,
+  name: state => state.user.name,
+  introduction: state => state.user.introduction,
+  status: state => state.user.status,
+  roles: state => state.user.roles,
+  userInfo: state => state.user.user,
+  userOrgId: state => get(state,'user.userInfo.userOrgId',''),
+  orgCode: state => get(state,'user.userInfo.attributes.orgCode ',''),
+  setting: state => state.user.setting,
+  settings: state => state.settings,
+  permission_routers: state => state.permission.routers,
+  needGetPermission: state => state.permission.needGetPermission,
+  addRouters: state => state.permission.addRouters,
+  appMenus:state => state.permission.appMenus,
+  appsInfo:state => state.permission.appsInfo,
+  appInfo:state => state.permission.appInfo,
+  errorLogs: state => state.errorLog.logs,
+  formStatus: state => state.formStatus,
+  dicts: state => state.formStatus.dicts,
+  dialog: state => state.formStatus.dialog,
+  stationState:state=>state.stationMail.haveMail
+}
+export default getters

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>add</title>
+    <defs>
+        <circle id="path-1" cx="32" cy="32" r="32"></circle>
+        <filter x="-14.8%" y="-13.3%" width="129.7%" height="129.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="拟物样式备份-3" transform="translate(-1453.000000, -791.000000)">
+            <g id="add" transform="translate(1459.000000, 796.000000)">
+                <g id="椭圆形" opacity="0.900000036">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#3271FD" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="新增-(2)" transform="translate(14.000000, 14.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M34.0447928,16.0358142 L19.9552072,16.0358142 L19.9552072,1.95411304 C19.9552072,0.866256295 19.0884658,5.59149817e-16 18,5.59149817e-16 C16.9115342,5.59149817e-16 16.0447928,0.866256295 16.0447928,1.95411304 L16.0447928,16.0358142 L1.95520717,16.0358142 C0.866741321,16.0358142 0,16.9020705 0,17.9899273 C0,19.077784 0.866741321,19.9440403 1.95520717,19.9440403 L16.0447928,19.9440403 L16.0447928,34.045887 C16.0447928,35.1337437 16.9115342,36 18,36 C19.0884658,36 19.9552072,35.1337437 19.9552072,34.045887 L19.9552072,19.9440403 L34.0447928,19.9440403 C35.1332587,19.9440403 36,19.077784 36,17.9899273 C36,16.9020705 35.1332587,16.0358142 34.0447928,16.0358142 Z" id="路径"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

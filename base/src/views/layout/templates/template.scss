@@ -1,0 +1,228 @@
+@import '@/styles/variables.scss';
+$leftCollapseWidth: 50px;
+$topHeight: 50px;
+$logoWidth: 300px;
+$topBorderColor: var(--tagBorderColor);
+$background: #fff;
+$sidebarBackground: rgb(242, 243, 245);
+$borderColor:#e5e5e5;
+.app-layout {
+  height: 100vh;
+  position:relative;
+  &.single-application {
+    .topmenu {
+      user-select:none;
+    }
+  }
+  .top {
+    position: relative;
+    background: $background;
+    border-bottom: 1px solid #ddd;
+    flex: 1 0 auto;
+    .logo {
+      height: $topHeight;
+      width: auto;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      background:#000;
+    }
+    .select-app-box {
+      width: auto;
+      display: flex;
+      align-items: center;
+    }
+    .topmenu {
+      height: $topHeight;
+      width:$logoWidth;
+      position: relative;
+    }
+    .search{
+      width:300px;
+      line-height:32px;
+      margin-top: 5px;
+      padding-right:40px;
+      padding-top:5px;
+      ::v-deep .el-input__inner{
+        border-radius: 14px;
+        // background: #f2f6fc;
+        &:focus{
+          background: #fff;
+        }
+      }
+    }
+    .topbar {
+      background: $background;
+      height: $topHeight;
+      flex-grow: inherit;
+      width: max-content;
+    }
+    .right{
+        max-width: max-content;
+    }
+  }
+  .bottom{
+      display:flex;
+      flex-flow:row;
+      position: relative;
+      .left {
+          transition: all ease .1s;
+
+          border-right:solid 1px #e5e5e5;
+          position: relative;
+          z-index: 1;
+          ::v-deep .el-scrollbar__thumb {
+            background-color: #F4F5F7 !important;
+            right: -2px;
+          }
+      }
+
+      .left.collapse{
+        width: $leftCollapseWidth;
+      }
+
+      .full-right{
+         width: calc(100%)
+      }
+      .right.collapse{
+        width: calc(100% - $leftCollapseWidth);
+      }
+  }
+
+  .sidebar {
+    background: $sidebarBackground;
+    .el-scrollbar__wrap {
+     overflow-x: hidden;
+    }
+  }
+  .main {
+    height: calc(100vh - $topHeight - 1px);
+  }
+  .svg-back {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+.main-center{
+  padding:0px calc(50vw - 800px);
+  background:#eaeaea;
+}
+.app-layout .top .topmenu{
+  margin-left: 0px;
+  line-height: 50px;
+  font-size:24px;
+  font-weight: 300;
+  color: $base-color-black;
+}
+
+.topmenu{
+ 
+  .title{
+    font-size:18px;
+    transform:translateY(-3px);
+    font-weight:600;
+    color:$base-color-black;
+    user-select:none;
+  }
+}
+::v-deep .el-menu--horizontal{
+ color:$base-color-black;
+}
+::v-deep .el-menu--horizontal{
+  flex-wrap: wrap!important;
+}
+.navigation{
+  display:flex;
+  height: 52px;
+  padding: 0px 10px;
+  transform:translateY(-2px);
+  width: max-content;
+  align-items: center;
+  .arrow {
+      transition: all .3s ease 0s;
+  }
+}
+.icon-bg{
+  cursor: pointer;
+  transform: translateY(17px);
+  display:inline-block;
+  text-align:center;
+  background-image: linear-gradient(135deg,#f8c54f,#f0a800);
+  border-radius: 4px;
+  height: 20px;
+  width: 20px;
+  i{
+    transform: translateY(-17px);
+    color: #fff!important;      
+  }
+}
+.current-menu{
+   display:inline-block;
+    cursor:pointer;
+    &>div{
+      display:inline;
+      padding:0px 6px 6px 6px;
+    }
+   &:hover{
+    &>div{
+      background: #e8e8e8;
+    }
+   }
+}
+.menu-picker{
+  display:flex;
+  cursor:pointer;
+  padding:0px 5px;
+  &:hover{
+    background:#e5e5e5;
+  }
+  i{
+    line-height: 52px;
+    height:52px;
+    width:32px;
+    padding: 4px 6px 6px 4px;
+    font-size:24px;
+    transform:translateY(-2px);
+    color:#606266;
+    cursor:pointer;
+  }
+}
+.tabs-picker{
+   display:inline-block;
+   cursor:pointer;
+   padding:0px 5px;
+   &:hover{
+      background: #e8e8e8;
+   }
+}
+::v-deep .tags-view-container{
+  border:none;
+  margin-top:5px;
+}
+.tagview{
+  flex:1;
+  &>i{
+    font-size:20px;
+    line-height:$topHeight - 8px;
+    cursor:pointer;
+    float:left;
+    padding:4px;
+    &:hover{
+      background:#e5e5e5;
+    }
+  }
+  user-select:none;
+}
+.run-enter-from,
+.run-leave-to {
+  transform: translateY(-50px);
+}
+.run-enter-to,
+.run-leave-from {
+  transform: translateY(0px);
+}
+.run-enter-active,
+.run-leave-active {
+  transition: all .4s linear 0s;
+}

@@ -1,0 +1,16 @@
+export default {
+  id:null,
+  name: null,
+  code:null ,
+  description: null,
+  sortNo: 1,
+  isLeaf: '0',
+  treeLevel: null,
+  seq:null,
+  parentId:null,
+  tenantId:null,
+  menuIcon:null,
+  isFixed: null,
+  openType: null,
+  resource:null,
+}

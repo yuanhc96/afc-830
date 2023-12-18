@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="40px" viewBox="0 0 33 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group 7 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="15.96875%" y1="0%" x2="84.03125%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#72B2B1" offset="0%"></stop>
+            <stop stop-color="#0B587A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#C4CDC2" offset="0%"></stop>
+            <stop stop-color="#7EA4A3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="darshboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" transform="translate(-992.000000, -796.000000)">
+            <g id="Group-7-Copy" transform="translate(1008.500000, 816.000000) rotate(-360.000000) translate(-1008.500000, -816.000000) translate(992.000000, 796.000000)">
+                <path d="M27,10.8571429 L27.0199926,4.80406825e-11 L33,3.08131705 L33,13.9384599 L27,10.8571429 Z M-6.89404089e-12,3.09981854 L6,2.1509905e-11 L6.0199926,10.1811356 L0.019992598,13.3855328 L-6.89404089e-12,3.09981854 Z M7.2,22.2857143 L33,36.5726666 L27,39.9897433 L7.2,29.1428571 L7.2,22.2857143 Z M9.00363917,31.6123992 L15.0036392,34.6937162 L6,40 L0.0199925981,36.5714286 L9.00363917,31.6123992 Z M27,21.7142857 L33,24.7819422 L23.442855,30.0617609 L17.6503278,26.8593457 L27,21.7142857 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                <path d="M27,39.9897433 L27.0199926,18.2754576 L33,15.0710604 L33,36.5714286 L27,39.9897433 Z M8.61888338e-12,14.8571429 L6,17.9384599 L6,40 L0.0199925981,36.5714286 L8.61888338e-12,14.8571429 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+                <path d="M6.83644252e-11,14.8571429 L27,8.04689648e-12 L33,3.08131705 L6,17.9384599 L6.83644252e-11,14.8571429 Z M17.4,13.1326005 L23.4,9.92820323 L33,15.0710604 L27.0199926,18.2754576 L17.4,13.1326005 Z M1.73239201e-11,3.09981854 L6,3.9306336e-12 L15,5.14285714 L9.0199926,8.24267569 L1.73239201e-11,3.09981854 Z" id="Combined-Shape" fill="#E7FCFB"></path>
+            </g>
+        </g>
+    </g>
+</svg>

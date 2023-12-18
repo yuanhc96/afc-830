@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* 改变主题色变量 */
+:export {
+  menuText: #bfcbd9;
+  menuActiveText: #ffffff;
+  subMenuActiveText: #f4f4f5;
+  menuBg: #304156;
+  menuHover: #263445;
+  subMenuBg: #1f2d3d;
+  subMenuHover: #001528;
+  sideBarWidth: 180px;
+  menu-color: rgba(255, 255, 255, 0.95);
+  menu-color-active: rgba(255, 255, 255, 0.95);
+  menu-background: #001529;
+  menu-background-active: #3B69B6;
+  tag-background-active: #3B69B6;
+  button-background: #3B69B6;
+  pagination-background-active: #3B69B6;
+}

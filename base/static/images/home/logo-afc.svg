@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="40px" viewBox="0 0 33 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 7 Copy</title>
+    <defs>
+        <linearGradient x1="15.96875%" y1="0%" x2="84.03125%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#3B6E8C" offset="0%"></stop>
+            <stop stop-color="#0B587A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="20.9750567%" x2="100%" y2="79.0249433%" id="linearGradient-2">
+            <stop stop-color="#3B6E8C" offset="0%"></stop>
+            <stop stop-color="#0B587A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="34.6651813%" x2="100%" y2="65.3348187%" id="linearGradient-3">
+            <stop stop-color="#3B6E8C" offset="0%"></stop>
+            <stop stop-color="#0B587A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="login备份" transform="translate(-1066.000000, -294.000000)">
+            <g id="录入框" transform="translate(979.000000, 281.000000)">
+                <g id="Group-7-Copy" transform="translate(103.500000, 33.000000) rotate(-360.000000) translate(-103.500000, -33.000000) translate(87.000000, 13.000000)">
+                    <path d="M9.00363917,31.6123992 L15.0036392,34.6937162 L6,40 L0.0199925981,36.5714286 L9.00363917,31.6123992 Z M7.2,22.2857143 L33,36.5726666 L27,39.9897433 L7.2,29.1428571 L7.2,22.2857143 Z M27,21.7142857 L33,24.7819422 L23.442855,30.0617609 L17.6503278,26.8593457 L27,21.7142857 Z M27.0199926,4.75717243e-11 L33,3.08131705 L33,13.9384599 L27,10.8571429 L27.0199926,4.75717243e-11 Z M6,2.17061924e-11 L6.0199926,10.1811356 L0.019992598,13.3855328 L-4.76330086e-12,3.09981854 L6,2.17061924e-11 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                    <path d="M9.65982849e-12,14.8571429 L6,17.9384599 L6,40 L0.0199925981,36.5714286 L9.65982849e-12,14.8571429 Z M33,15.0710604 L33,36.5714286 L27,39.9897433 L27.0199926,18.2754576 L33,15.0710604 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+                    <path d="M23.4,9.92820323 L33,15.0710604 L27.0199926,18.2754576 L17.4,13.1326005 L23.4,9.92820323 Z M27,7.50510765e-12 L33,3.08131705 L6,17.9384599 L6.94906355e-11,14.8571429 L27,7.50510765e-12 Z M6,3.38884476e-12 L15,5.14285714 L9.0199926,8.24267569 L1.84501303e-11,3.09981854 L6,3.38884476e-12 Z" id="Combined-Shape" fill="url(#linearGradient-3)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

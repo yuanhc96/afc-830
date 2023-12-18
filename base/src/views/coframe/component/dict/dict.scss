@@ -1,0 +1,119 @@
+.tag{
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 2px;
+  color: #FFFFFF;
+  display: block;
+  width: max-content;
+  text-align: center;
+  height: 22px;
+  line-height: 22px;
+  margin-top:3px;
+}
+.PRIORITY {
+  @extend .tag;
+  &_80 {
+    background-color:#F56C6C;
+  }
+  &_70 {
+    background-color:#E6A23C;
+  }
+  &_60 {
+    background-color:#409EFF;
+  }
+  &_50 {
+    background-color:#67C23A;
+  }
+  &_40 {
+    background-color:#909399;
+  }
+  &_30 {
+    background-color:#909399;
+  }
+}
+
+.STATUS{
+  @extend .tag;
+  &_1 {
+    background-color: #F56C6C;
+  }
+  &_2 {
+    background-color: #67C23A;
+  }
+  &_3 {
+    background-color: #E6A23C;
+  }
+  &_7 {
+    background-color: #909399;
+  }
+  &_8 {
+    background-color: #909399;
+  }
+  &_10 {
+    background-color: #F56C6C;
+  }
+  &_-1 {
+    background-color: #F56C6C;
+  }
+}
+
+.PROCESSS_TATUS{
+  @extend .tag;
+  &_1 {
+    background-color: #F56C6C;
+  }
+  &_2 {
+    background-color: #67C23A;
+  }
+  &_3 {
+    background-color: #E6A23C;
+  }
+  &_7 {
+    background-color: #909399;
+  }
+  &_8 {
+    background-color: #909399;
+  }
+  &_9 {
+    background-color: #F56C6C;
+  }
+}
+
+.WORKITEM_STATUS {
+  @extend .tag;
+  &_4{
+    background-color: #409EFF;
+  }
+  &_8{
+    background-color: #E6A23C;
+  }
+  &_10{
+    background-color: #67C23A;
+  }
+  &_12{
+    background-color: #909399;
+  }
+  &_13{
+    background-color: #909399;
+  }
+}
+.TIMEOUT{
+  @extend .tag;
+  &_Y{
+    background-color: #F56C6C;
+  }
+  &_N{
+    // color:#000000;
+    background-color:#E6A23C;
+  }
+}
+.USEFUL{
+  @extend .tag;
+  &_Y{
+    background-color: #67C23A;
+  }
+  &_N{
+    // color:#000000;
+    background-color:#E6A23C;
+  }
+}

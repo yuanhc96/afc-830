@@ -1,0 +1,39 @@
+{
+  "start": {
+    "panel": "start_activity.gif",
+    "node": "start_activity.gif"
+  },
+  "line": {
+    "default": "edge.gif",
+    "active": "edge2.gif"
+  },
+  "manual" : {
+    "panel": "manual_activity.gif",
+    "node": "manual_1.gif"
+  },
+  "route" : {
+    "panel": "router_activity16.gif",
+    "node": "route_1.gif"
+  },
+  "subflow" : {
+    "panel": "sub_activity.gif",
+    "node": "subflow_1.gif"
+  },
+  "toolapp" : {
+    "panel": "auto_activity.gif",
+    "node": "toolapp_1.gif"
+  },
+  "note" : {
+    "panel": "note.gif"
+  },
+  "finish" : {
+    "panel": "end_activity.gif",
+    "node": "end_activity.gif"
+  },
+  "eosservice": {
+    "node": "EOSService1.gif"
+  },
+  "restservice": {
+    "node": "RestService1.gif"
+  }
+}

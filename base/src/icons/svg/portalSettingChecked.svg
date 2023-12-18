@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>关闭</title>
+    <g id="darshboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" transform="translate(-3172.000000, -25.000000)" fill="#F66C6C" fill-rule="nonzero">
+            <g id="关闭" transform="translate(3172.000000, 25.000000)">
+                <path d="M7,1 C10.3125,1 13,3.6875 13,7 C13,10.3125 10.3125,13 7,13 C3.6875,13 1,10.3125 1,7 C1,3.6875 3.6875,1 7,1 M7,0 C3.1375,0 0,3.1375 0,7 C0,10.8625 3.1375,14 7,14 C10.8625,14 14,10.8625 14,7 C14,3.1375 10.8625,0 7,0 Z M10.725,3.975 L10.0125,3.2625 L7,6.3 L3.975,3.275 L3.2625,3.9875 L6.3,7 L3.275,10.025 L3.9875,10.7375 L7,7.7125 L10.025,10.7375 L10.7375,10.025 L7.7125,7 L10.725,3.975 L10.725,3.975 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

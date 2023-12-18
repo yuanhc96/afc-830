@@ -1,0 +1,194 @@
+@import './variables.scss';
+
+@mixin colorBtn($color) {
+  background: $color;
+  &:hover {
+    color: $color;
+    &:before,
+    &:after {
+      background: $color;
+    }
+  }
+}
+.table-tool-bar .el-button + .el-button{
+  margin-left: 0;
+  margin-right: 5px;
+}
+.table-tool-bar .el-button:first-child {
+  margin-right: 5px;
+}
+
+.blue-btn {
+  @include colorBtn($blue)
+}
+
+.light-blue-btn {
+  @include colorBtn($light-blue)
+}
+
+.red-btn {
+  @include colorBtn($red)
+}
+
+.pink-btn {
+  @include colorBtn($pink)
+}
+
+.green-btn {
+  @include colorBtn($green)
+}
+
+.tiffany-btn {
+  @include colorBtn($tiffany)
+}
+
+.yellow-btn {
+  @include colorBtn($yellow)
+}
+
+.pan-btn {
+  font-size: 14px;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-right: 25px;
+  transition: 600ms ease all;
+  position: relative;
+  display: inline-block;
+  &:hover {
+    background: #fff;
+    &:before,
+    &:after {
+      width: 100%;
+      transition: 600ms ease all;
+    }
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    transition: 400ms ease all;
+  }
+  &::after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.custom-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  color: #fff;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+// 操作按钮移动到面包屑同级右侧
+.btn-move-top {
+  height: 50px;
+  line-height: 50px;
+  width: 50%;
+  position: fixed;
+  z-index: 2021;
+  top: 100px;
+  right: 35px;
+  text-align: right;
+}
+
+// 列表更多操作按钮
+.el-dropdown-link-more {
+  margin-left: 10px;
+  color: #666666;
+  font-size: 24px;
+  cursor: pointer;
+  &:hover {
+    color: #236EF6;
+  }
+}
+
+//列表点击可编辑字段
+.editable-text:hover {
+  color: #3B69B6;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+$size: '--mini' ,'--small', '--large';
+button.el-button{
+  height: 32px;
+}
+button.el-button.el-button--primary{
+  color: var(--mainTextColor);
+  background: var(--tagBg);
+  border: 1px solid var(--tagBorderColor);
+}
+button.el-button.el-button--primary.is-plain.el-button--mini{
+  border: 1px solid var(--tagBorderColor);
+  background-color: #fff;
+  border-color: var(--tagBg);
+  color: var(--tagBg);
+}
+@each $i in $size {
+  button.el-button.el-button--primary.el-button#{$i} {
+    color: var(--mainTextColor);
+    background: var(--tagBg);
+    border: 1px solid var(--tagBorderColor);
+  }
+  button.el-button.el-button--primary.el-button#{$i}.is-disabled {
+    background: #c0c4cc;
+    border-color: #c0c4cc;
+  }
+  button.el-button.el-button--default.el-button#{$i}.el-button--primary.btn-custom-confirm {
+    color: var(--mainTextColor);
+    background: var(--tagBg);
+    border: 1px solid var(--tagBorderColor);
+  }
+}
+.tag-btn-active.el-button.is-round{
+  color: #3B69B6;
+  border-color: #c4d2e9;
+  background-color: #ebf0f8;
+}
+.tag-btn{
+  float: left;
+  position: relative;
+  margin-right: 5px;
+  .edit-icon-group{
+    width: 29px;
+    height: 32px;
+    background-color: rgba(13, 10, 49, 0.7);
+    position: absolute;
+    right: 0;
+    top: 0px;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: none;
+    div{
+      color: white;
+      i{
+        cursor: pointer;
+      }
+    }
+  }
+}
+.tag-btn:hover .edit-icon-group{
+  display: block;
+}
