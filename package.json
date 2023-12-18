@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "plop": "plop",
+    "run:all": "npm-run-all --parallel dev:*",
+    "init:all": "npm-run-all --parallel install:*",
+    "dev:base": "cd base && npm run dev",
+    "install:base": "cd base && npm i",
+    "dev:demo1": "cd demo1 && npm run dev",
+    "install:demo1": "cd demo1 &&  npm i",
+    "dev:app-process": "cd base && npm run dev",
+    "install:app-process": "cd base &&  npm i"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "plop": "2.7.6"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    }
+  },
+  "dependencies": {
+    "vue-dompurify-html": "^4.1.4",
+    "vue2-ace-editor": "^0.0.15"
+  }
+}
