@@ -1,0 +1,46 @@
+{
+  "loginType": "normal",
+  "serverUrl": "/",
+  "title": "EOS-Lowcode",
+  "shortTitle": "EOS-Lowcode",
+  "loginPage": {
+    "remotePath": "http://localhost:8010/",
+    "module": "bfp",
+    "page": "bfp_login",
+    "titlePrefixLogo": "./static/images/home/logo-afc.svg"
+  },
+  "loginTo": {
+    "remotePath": "http://localhost:8010/",
+    "module": "bfp",
+    "page": "bfp_login"
+  },
+  "logoutTo": "./index.html",
+  "apiPrefix": {
+    "priority": "highest",
+    "enabled":true,
+    "path":"/"
+  },
+  "componentExt":{
+    "path":"/components-ext/remoteEntry.js",
+    "scope": "ComponentsExt"
+  },
+  "isExpress":true,
+  "ableScan": true,
+  "loginBgSwitch": true,
+  "actionsPosition": "top",
+  "recordLabel": "Copyright © Primeton Technologies Ltd. ",
+  "loginLogoVisible": true,
+  "amap": {
+    "key": "ff79d1c0e49360be85296958cdc04c2b",
+    "securityJsCode": "345769b4720ad09db09e52dc06f39b7b",
+    "webServerKey": "2aef2bea043b9ca9d1172af916dd2b30"
+  },
+  "helpDocUrl": "http://help.primeton.com/eos/8.3LA1/",
+  "componentLibraryUrl": "http://help.primeton.com/eos/8.3LA1/components-ref/intro.html",
+  "processOpenType": "dialog",
+  "isAI":true,
+  "bfpConfig": {
+    "startLinkApproval": false
+  },
+  "homePageLogoUrl":"./static/images/AFC_logo.svg"
+}

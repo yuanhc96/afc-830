@@ -1,0 +1,42 @@
+{
+  "loginType": "normal",
+  "serverUrl": "/",
+  "isRelativePath": false,
+  "isBpsStandalone": false,
+  "ssoLoginUrl": "https://ameuat.primeton.com:8443/default/afc/sso/sso.login",
+  "ssoLogoutUrl": "https://ameuat.primeton.com:8443/default/afc/sso/sso.login",
+  "title": "TM20 ADP&MASA",
+  "shortTitle": "TM20 ADP&MASA",
+  "loginPage": {
+    "remotePath": "http://localhost:8010/",
+    "module": "bfp",
+    "page": "bfp_login",
+    "titlePrefixLogo": "./static/images/home/logo-afc.svg"
+  },
+  "homePage": null,
+  "logoutTo": "/",
+  "apiPrefix": {
+    "priority": "lowest",
+    "enabled": true,
+    "path": "/afc"
+  },
+  "isExpress": false,
+  "ableScan": true,
+  "loginBgSwitch": true,
+  "actionsPosition": "top",
+  "recordLabel": "Copyright © Primeton Technologies Ltd. ",
+  "loginLogoVisible": true,
+  "amap": {
+    "key": "ff79d1c0e49360be85296958cdc04c2b",
+    "securityJsCode": "345769b4720ad09db09e52dc06f39b7b",
+    "webServerKey": "2aef2bea043b9ca9d1172af916dd2b30"
+  },
+  "helpDocUrl": "http://help.primeton.com/eos/8.3LA1/",
+  "componentLibraryUrl": "http://help.primeton.com/eos/8.3LA1/components-ref/intro.html",
+  "processOpenType": "dialog",
+  "isAI":true,
+  "bfpConfig": {
+    "startLinkApproval": false
+  },
+  "homePageLogoUrl": "./static/images/tianma_logo.png"
+}
